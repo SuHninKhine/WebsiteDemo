@@ -7,7 +7,7 @@ import { featuredProfessionals, howItWorksSteps, services, testimonials } from "
 export default function HomePage() {
   return (
     <div className="space-y-20 pb-20">
-      <section className="relative overflow-hidden border-b border-sand-200 bg-gradient-to-b from-sand-50 via-white to-white">
+      <section className="relative border-b border-border bg-surface">
         <div className="container-max grid gap-12 py-14 md:grid-cols-2 md:items-center md:py-20">
           <div className="space-y-6">
             <Badge label="Marketplace demo" />
@@ -17,36 +17,36 @@ export default function HomePage() {
             <p className="text-lg text-slate-600 md:text-xl">
               Compare top-rated pros, see upfront details, and get quotes in minutes. Built for speed and peace of mind.
             </p>
-            <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-sand-200">
+            <div className="rounded-2xl border border-border bg-white p-4 shadow-sm">
               <div className="flex flex-col gap-3 md:flex-row">
                 <input
                   placeholder="What service do you need?"
-                  className="w-full rounded-lg border border-sand-200 px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none"
+                  className="w-full rounded-lg border border-border px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none"
                 />
                 <input
                   placeholder="Your location"
-                  className="w-full rounded-lg border border-sand-200 px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none md:max-w-[180px]"
+                  className="w-full rounded-lg border border-border px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none md:max-w-[180px]"
                 />
-                <button className="w-full rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-brand-700 md:w-auto">
+                <button className="w-full rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300 md:w-auto">
                   Get started
                 </button>
               </div>
               <p className="mt-3 text-xs text-slate-500">UI only — no data is submitted.</p>
             </div>
             <div className="flex flex-wrap gap-4 text-sm text-slate-600">
-              <div className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-sand-200">
+              <div className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">
                 <span className="text-brand-600">★</span> 4.9 average rating
               </div>
-              <div className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-sand-200">
+              <div className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">
                 <span className="text-brand-600">⚡</span> Quotes in under an hour
               </div>
-              <div className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-sand-200">
+              <div className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">
                 <span className="text-brand-600">🛡️</span> Verified local pros
               </div>
             </div>
           </div>
           <div className="relative">
-            <div className="relative rounded-3xl border border-sand-200 bg-white p-6 shadow-card">
+            <div className="relative rounded-3xl border border-border bg-white p-6 shadow-sm">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
@@ -59,7 +59,7 @@ export default function HomePage() {
                   {services.slice(0, 6).map((service) => (
                     <div
                       key={service.id}
-                      className="rounded-2xl border border-sand-200 bg-sand-50/60 px-4 py-3 transition hover:-translate-y-0.5 hover:border-brand-200 hover:bg-white hover:shadow-card"
+                      className="rounded-2xl border border-border bg-surface px-4 py-3 transition hover:-translate-y-0.5 hover:border-brand-200 hover:bg-white hover:shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <span className="text-xl">{service.icon}</span>
@@ -87,7 +87,7 @@ export default function HomePage() {
           {services.slice(0, 9).map((service) => (
             <div
               key={service.id}
-              className="group flex items-start gap-3 rounded-2xl border border-sand-200 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-card"
+              className="group flex items-start gap-3 rounded-2xl border border-border bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-md"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-xl">{service.icon}</div>
               <div className="space-y-1">
@@ -109,7 +109,7 @@ export default function HomePage() {
           {featuredProfessionals.map((pro) => (
             <div
               key={pro.id}
-              className="rounded-3xl border border-sand-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-card"
+              className="rounded-3xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-md"
             >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="space-y-1">
@@ -124,7 +124,7 @@ export default function HomePage() {
                   <span className="font-semibold">{pro.rating}</span>
                   <span className="text-slate-500">({pro.reviewCount} reviews)</span>
                 </div>
-                <span className="rounded-full bg-sand-100 px-3 py-1 text-xs font-semibold text-slate-700">
+                <span className="rounded-full bg-surface px-3 py-1 text-xs font-semibold text-slate-700">
                   From {pro.startingPrice}
                 </span>
               </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
               </div>
               <div className="mt-5 flex items-center justify-between">
                 <div className="text-sm text-slate-600">24h response • Direct scheduling</div>
-                <button className="rounded-full border border-sand-200 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:border-brand-200 hover:text-brand-700">
+                <button className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-slate-800 transition hover:border-brand-200 hover:text-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300">
                   View profile
                 </button>
               </div>
@@ -154,7 +154,7 @@ export default function HomePage() {
           {howItWorksSteps.map((step, index) => (
             <div
               key={step.title}
-              className="rounded-2xl border border-sand-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-card"
+              className="rounded-2xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-md"
             >
               <div className="flex items-center justify-between">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-xl">{step.icon}</div>
@@ -177,7 +177,7 @@ export default function HomePage() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="rounded-2xl border border-sand-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-card"
+              className="rounded-2xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-md"
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-lg font-semibold text-brand-700">
@@ -195,17 +195,16 @@ export default function HomePage() {
       </section>
 
       <section className="container-max">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-600 to-brand-700 p-10 shadow-card">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#ffffff22,transparent_50%)]" aria-hidden />
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-10 shadow-sm">
           <div className="relative space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-white/80">Ready to start?</p>
-            <h3 className="text-2xl font-semibold text-white md:text-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand-600">Ready to start?</p>
+            <h3 className="text-2xl font-semibold text-slate-900 md:text-3xl">
               Post a job and get free quotes from trusted professionals
             </h3>
-            <p className="max-w-2xl text-white/90">
+            <p className="max-w-2xl text-slate-600">
               Share the details once. We&apos;ll line up vetted pros so you can compare options without the back-and-forth.
             </p>
-            <button className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition hover:bg-sand-100">
+            <button className="rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300">
               Post a job
             </button>
           </div>

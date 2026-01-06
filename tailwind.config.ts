@@ -9,26 +9,22 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          50: "#eef7ff",
-          100: "#d9ebff",
-          200: "#b4d7ff",
-          300: "#81bfff",
-          400: "#489eff",
-          500: "#1f7cff",
-          600: "#0f63e6",
-          700: "#0d4bb4",
-          800: "#0f3e8a",
-          900: "#0f356f"
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a"
         },
-        sand: {
-          50: "#f9fafb",
-          100: "#f2f4f7",
-          200: "#e5e7eb",
-          300: "#d6dae3"
-        }
+        surface: "#f8fafc",
+        border: "#e5e7eb"
       },
       boxShadow: {
-        card: "0 12px 40px -16px rgba(15, 63, 124, 0.18)"
+        card: "0 10px 30px -20px rgba(15, 23, 42, 0.25)"
       }
     }
   },

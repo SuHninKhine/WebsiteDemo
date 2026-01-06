@@ -23,7 +23,7 @@ export default function ServicesPage() {
         {services.map((service) => (
           <div
             key={service.id}
-            className="group flex h-full flex-col justify-between rounded-2xl border border-sand-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-card"
+            className="group flex h-full flex-col justify-between rounded-2xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-md"
           >
             <div className="flex items-start gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-xl">

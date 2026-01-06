@@ -7,7 +7,7 @@ import { howItWorksSteps } from "../data/mockData";
 export default function HowItWorksPage() {
   return (
     <div className="space-y-16 pb-16">
-      <section className="border-b border-sand-200 bg-sand-50/70">
+      <section className="border-b border-border bg-surface">
         <div className="container-max grid gap-10 py-14 md:grid-cols-2 md:items-center">
           <div className="space-y-5">
             <Badge label="Guided flow" />
@@ -16,12 +16,12 @@ export default function HowItWorksPage() {
               Post your project once. We surface vetted professionals, help you compare options, and make hiring feel effortless.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-slate-700">
-              <span className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-sand-200">No spam, ever</span>
-              <span className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-sand-200">Transparent reviews</span>
-              <span className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-sand-200">Local specialists</span>
+              <span className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">No spam, ever</span>
+              <span className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">Transparent reviews</span>
+              <span className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">Local specialists</span>
             </div>
           </div>
-          <div className="rounded-3xl border border-sand-200 bg-white p-6 shadow-card">
+          <div className="rounded-3xl border border-border bg-white p-6 shadow-sm">
             <div className="space-y-4">
               {howItWorksSteps.map((step, index) => (
                 <div key={step.title} className="flex items-start gap-3">
@@ -35,7 +35,7 @@ export default function HowItWorksPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-5 rounded-2xl bg-sand-50 p-4">
+            <div className="mt-5 rounded-2xl bg-surface p-4">
               <p className="text-sm font-semibold text-slate-900">No commitment to explore</p>
               <p className="text-sm text-slate-600">Share details, compare pros, and book only when you&apos;re ready.</p>
             </div>
@@ -53,7 +53,7 @@ export default function HowItWorksPage() {
           {howItWorksSteps.map((step) => (
             <div
               key={step.title}
-              className="flex flex-col gap-3 rounded-2xl border border-sand-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-card"
+              className="flex flex-col gap-3 rounded-2xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-md"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-xl">{step.icon}</div>
               <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
@@ -84,7 +84,7 @@ export default function HowItWorksPage() {
               text: "See ratings, response times, and recent work before you book."
             }
           ].map((item) => (
-            <div key={item.title} className="rounded-2xl border border-sand-200 bg-white p-5 shadow-sm">
+            <div key={item.title} className="rounded-2xl border border-border bg-white p-5 shadow-sm">
               <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{item.text}</p>
             </div>
@@ -93,18 +93,18 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="container-max">
-        <div className="rounded-3xl bg-gradient-to-r from-brand-600 to-brand-700 p-10 shadow-card">
+        <div className="rounded-3xl border border-border bg-white p-10 shadow-sm">
           <div className="space-y-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-white/80">Get started</p>
-            <h3 className="text-2xl font-semibold text-white md:text-3xl">Describe your project once—let us do the matching</h3>
-            <p className="max-w-2xl text-white/90">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand-600">Get started</p>
+            <h3 className="text-2xl font-semibold text-slate-900 md:text-3xl">Describe your project once—let us do the matching</h3>
+            <p className="max-w-2xl text-slate-600">
               We line up vetted pros and help you compare quotes quickly so you can book with confidence.
             </p>
             <div className="flex flex-wrap gap-3">
-              <button className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition hover:bg-sand-100">
+              <button className="rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300">
                 Post a job
               </button>
-              <button className="rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/30 transition hover:bg-white/15">
+              <button className="rounded-full border border-border px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300">
                 Talk to support
               </button>
             </div>
