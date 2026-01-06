@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Badge } from "./components/Badge";
 import { SectionHeading } from "./components/SectionHeading";
 import { featuredProfessionals, howItWorksSteps, services, testimonials } from "./data/mockData";
@@ -29,7 +30,7 @@ export default function HomePage() {
                   placeholder="Your location"
                   className="w-full rounded-full border border-border px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none md:max-w-[180px]"
                 />
-                <button className="w-full rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300 md:w-auto">
+                <button className="w-full rounded-full bg-[#5dcdf1] px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black md:w-auto">
                   Get started
                 </button>
               </div>
@@ -60,7 +61,17 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative space-y-4">
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-white shadow-sm">
+              <Image
+                src="/images/hero.png"
+                alt="Home professional working attentively"
+                width={900}
+                height={600}
+                className="h-64 w-full object-cover object-top"
+                priority
+              />
+            </div>
             <div className="relative rounded-3xl border border-border bg-white p-6 shadow-sm">
               <div className="absolute -right-10 -top-12 h-48 w-48 rounded-full bg-[#fbbf24] opacity-20 blur-3xl" aria-hidden />
               <div className="space-y-4 relative z-10">
@@ -196,9 +207,19 @@ export default function HomePage() {
               className="rounded-2xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-md"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-lg font-semibold text-brand-700">
-                  {testimonial.name.slice(0, 1)}
-                </div>
+                {testimonial.avatar ? (
+                  <Image
+                    src={testimonial.avatar}
+                    alt={`${testimonial.name} avatar`}
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 rounded-full object-cover shadow-sm"
+                  />
+                ) : (
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-lg font-semibold text-brand-700">
+                    {testimonial.name.slice(0, 1)}
+                  </div>
+                )}
                 <div>
                   <p className="text-lg font-semibold text-slate-900">{testimonial.name}</p>
                   <p className="text-sm text-slate-500">{testimonial.service}</p>
@@ -220,7 +241,7 @@ export default function HomePage() {
             <p className="max-w-2xl text-slate-600">
               Share the details once. We&apos;ll line up vetted pros so you can compare options without the back-and-forth.
             </p>
-            <button className="rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300">
+            <button className="rounded-full bg-[#5dcdf1] px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
               Post a job
             </button>
           </div>

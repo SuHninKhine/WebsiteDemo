@@ -20,6 +20,7 @@ export type Testimonial = {
   name: string;
   quote: string;
   service: string;
+  avatar?: string;
 };
 
 export const services: Service[] = [
@@ -84,12 +85,14 @@ export const testimonials: Testimonial[] = [
   {
     name: "Danielle M.",
     quote: "They matched me with three pros in under an hour. I booked the same day.",
-    service: "House Cleaning"
+    service: "House Cleaning",
+    avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=240&q=80"
   },
   {
     name: "Marcus J.",
     quote: "Clear reviews and upfront pricing made hiring a breeze.",
-    service: "Electrical"
+    service: "Electrical",
+    avatar: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=240&q=80"
   },
   {
     name: "Priya K.",

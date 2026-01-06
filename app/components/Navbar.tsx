@@ -42,7 +42,7 @@ export function Navbar() {
           </Link>
           <Link
             href="#"
-            className="rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300"
+            className="rounded-full bg-[#5dcdf1] px-5 py-2 text-sm font-semibold text-slate-900 transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Post a job
           </Link>
@@ -77,7 +77,7 @@ export function Navbar() {
               </Link>
               <Link
                 href="#"
-                className="rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-brand-700"
+                className="rounded-full bg-[#5dcdf1] px-5 py-2 text-sm font-semibold text-slate-900 transition hover:bg-black hover:text-white"
               >
                 Post a job
               </Link>

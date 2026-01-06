@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Badge } from "../components/Badge";
 import { SectionHeading } from "../components/SectionHeading";
 import { howItWorksSteps } from "../data/mockData";
@@ -23,24 +24,35 @@ export default function HowItWorksPage() {
               <span className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">Local specialists</span>
             </div>
           </div>
-          <div className="relative rounded-3xl border border-border bg-white p-6 shadow-sm">
-            <div className="absolute -right-6 -top-10 h-32 w-32 rounded-full bg-[#fca5a5] opacity-20 blur-2xl" aria-hidden />
-            <div className="space-y-4 relative z-10">
-              {howItWorksSteps.map((step, index) => (
-                <div key={step.title} className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-base font-semibold text-brand-700">
-                    {index + 1}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">{step.title}</p>
-                    <p className="text-sm text-slate-600">{step.description}</p>
-                  </div>
-                </div>
-              ))}
+          <div className="space-y-4">
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-white shadow-sm">
+              <Image
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+                alt="Planner and laptop illustrating an organized project flow"
+                width={900}
+                height={600}
+                className="h-56 w-full object-cover"
+              />
             </div>
-            <div className="mt-5 rounded-2xl bg-surface p-4">
-              <p className="text-sm font-semibold text-slate-900">No commitment to explore</p>
-              <p className="text-sm text-slate-600">Share details, compare pros, and book only when you&apos;re ready.</p>
+            <div className="relative rounded-3xl border border-border bg-white p-6 shadow-sm">
+              <div className="absolute -right-6 -top-10 h-32 w-32 rounded-full bg-[#fca5a5] opacity-20 blur-2xl" aria-hidden />
+              <div className="space-y-4 relative z-10">
+                {howItWorksSteps.map((step, index) => (
+                  <div key={step.title} className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-base font-semibold text-brand-700">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">{step.title}</p>
+                      <p className="text-sm text-slate-600">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 rounded-2xl bg-surface p-4">
+                <p className="text-sm font-semibold text-slate-900">No commitment to explore</p>
+                <p className="text-sm text-slate-600">Share details, compare pros, and book only when you&apos;re ready.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -104,10 +116,10 @@ export default function HowItWorksPage() {
               We line up vetted pros and help you compare quotes quickly so you can book with confidence.
             </p>
             <div className="flex flex-wrap gap-3">
-              <button className="rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300">
+              <button className="rounded-full bg-[#5dcdf1] px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
                 Post a job
               </button>
-              <button className="rounded-full border border-border px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300">
+              <button className="rounded-full border border-border px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
                 Talk to support
               </button>
             </div>
