@@ -1,0 +1,12 @@
+.next
+.turbo
+node_modules
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+.vercel
+.DS_Store
