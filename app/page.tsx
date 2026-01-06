@@ -7,31 +7,46 @@ import { featuredProfessionals, howItWorksSteps, services, testimonials } from "
 export default function HomePage() {
   return (
     <div className="space-y-20 pb-20">
-      <section className="relative border-b border-border bg-surface">
-        <div className="container-max grid gap-12 py-14 md:grid-cols-2 md:items-center md:py-20">
+      <section className="relative overflow-hidden border-b border-border bg-[#fffbf7]">
+        <div className="absolute -left-32 -top-40 h-[520px] w-[520px] rounded-full bg-[#f6efe8] opacity-60 blur-3xl" aria-hidden />
+        <div className="absolute right-[-120px] top-10 h-[420px] w-[420px] rounded-full bg-[#ede9fe] opacity-35 blur-2xl" aria-hidden />
+        <div className="container-max relative z-10 grid gap-12 py-14 md:grid-cols-2 md:items-center md:py-20">
           <div className="space-y-6">
             <Badge label="Marketplace demo" />
             <h1 className="text-4xl font-semibold leading-tight text-slate-900 md:text-5xl">
-              Find trusted local professionals for any project
+              Find <span className="underline-scribble">trusted pros</span> for any project
             </h1>
-            <p className="text-lg text-slate-600 md:text-xl">
+            <p className="text-lg text-slate-600 md:text-xl leading-[1.7]">
               Compare top-rated pros, see upfront details, and get quotes in minutes. Built for speed and peace of mind.
             </p>
-            <div className="rounded-2xl border border-border bg-white p-4 shadow-sm">
+            <div className="relative rounded-3xl border border-border bg-white/90 p-5 shadow-sm backdrop-blur">
               <div className="flex flex-col gap-3 md:flex-row">
                 <input
                   placeholder="What service do you need?"
-                  className="w-full rounded-lg border border-border px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none"
+                  className="w-full rounded-full border border-border px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none"
                 />
                 <input
                   placeholder="Your location"
-                  className="w-full rounded-lg border border-border px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none md:max-w-[180px]"
+                  className="w-full rounded-full border border-border px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none md:max-w-[180px]"
                 />
                 <button className="w-full rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300 md:w-auto">
                   Get started
                 </button>
               </div>
               <p className="mt-3 text-xs text-slate-500">UI only — no data is submitted.</p>
+              <svg
+                className="pointer-events-none absolute -right-6 -bottom-10 h-28 w-28 rotate-6 opacity-60"
+                viewBox="0 0 120 120"
+                fill="none"
+                aria-hidden
+              >
+                <path
+                  d="M10 80 C50 60 80 60 105 25"
+                  stroke="#fca5a5"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+              </svg>
             </div>
             <div className="flex flex-wrap gap-4 text-sm text-slate-600">
               <div className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">
@@ -47,7 +62,8 @@ export default function HomePage() {
           </div>
           <div className="relative">
             <div className="relative rounded-3xl border border-border bg-white p-6 shadow-sm">
-              <div className="space-y-4">
+              <div className="absolute -right-10 -top-12 h-48 w-48 rounded-full bg-[#fbbf24] opacity-20 blur-3xl" aria-hidden />
+              <div className="space-y-4 relative z-10">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.12em] text-brand-600">Trending</p>

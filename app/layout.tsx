@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white text-slate-900`}>
+      <body className={`${inter.className} text-slate-900`}>
         <Navbar />
         <main className="min-h-screen">{children}</main>
       </body>

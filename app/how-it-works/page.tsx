@@ -7,8 +7,10 @@ import { howItWorksSteps } from "../data/mockData";
 export default function HowItWorksPage() {
   return (
     <div className="space-y-16 pb-16">
-      <section className="border-b border-border bg-surface">
-        <div className="container-max grid gap-10 py-14 md:grid-cols-2 md:items-center">
+      <section className="relative overflow-hidden border-b border-border bg-[#fffbf7]">
+        <div className="absolute -left-24 -top-20 h-[420px] w-[420px] rounded-full bg-[#f6efe8] opacity-60 blur-3xl" aria-hidden />
+        <div className="absolute right-[-80px] top-24 h-[360px] w-[360px] rounded-full bg-[#e0f2fe] opacity-30 blur-2xl" aria-hidden />
+        <div className="container-max relative z-10 grid gap-10 py-14 md:grid-cols-2 md:items-center">
           <div className="space-y-5">
             <Badge label="Guided flow" />
             <h1 className="text-4xl font-semibold text-slate-900 md:text-5xl">How it works</h1>
@@ -21,8 +23,9 @@ export default function HowItWorksPage() {
               <span className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-border">Local specialists</span>
             </div>
           </div>
-          <div className="rounded-3xl border border-border bg-white p-6 shadow-sm">
-            <div className="space-y-4">
+          <div className="relative rounded-3xl border border-border bg-white p-6 shadow-sm">
+            <div className="absolute -right-6 -top-10 h-32 w-32 rounded-full bg-[#fca5a5] opacity-20 blur-2xl" aria-hidden />
+            <div className="space-y-4 relative z-10">
               {howItWorksSteps.map((step, index) => (
                 <div key={step.title} className="flex items-start gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-base font-semibold text-brand-700">
