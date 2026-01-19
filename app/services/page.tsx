@@ -10,7 +10,7 @@ export default function ServicesPage() {
         <p className="text-sm font-semibold uppercase tracking-[0.12em] text-brand-600">Browse</p>
         <h1 className="text-3xl font-semibold text-slate-900 md:text-4xl">Explore Services</h1>
         <p className="mx-auto max-w-2xl text-slate-600 md:text-lg">
-          Pick the category that fits your project. Each listing is curated to surface pros who specialize in that work.r
+          Pick the category that fits your project. Each listing is curated to surface pros who specialize in that work.rf
         </p>
       </div>
 
